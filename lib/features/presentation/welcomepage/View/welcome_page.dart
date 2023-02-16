@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shoppingmxl/features/presentation/customWidgets/custom_elevated_button.dart';
+import 'package:shoppingmxl/colors/colors.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -19,7 +21,7 @@ class WelcomePage extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.all(Radius.circular(20))),
                 width: 310,
-                height: 310,
+                height: 300,
                 padding: const EdgeInsets.all(30),
                 child: CircleAvatar(
                   backgroundColor: Colors.grey.withOpacity(0.15),
@@ -38,7 +40,7 @@ class WelcomePage extends StatelessWidget {
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontFamily: 'Roboto',
-                      fontSize: 30),
+                      fontSize: 25),
                 ),
               ),
               const Padding(
@@ -48,7 +50,7 @@ class WelcomePage extends StatelessWidget {
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontFamily: 'Roboto',
-                      fontSize: 30),
+                      fontSize: 25),
                 ),
               ),
               const SizedBox(
@@ -57,48 +59,24 @@ class WelcomePage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                 child: SizedBox(
-                  width: 260.00,
-                  height: 45,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ButtonStyle(
-                      backgroundColor: const MaterialStatePropertyAll(
-                          Color.fromRGBO(0, 145, 255, 1)),
-                      shape: MaterialStatePropertyAll<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0),
-                        ),
-                      ),
+                    width: 260.00,
+                    height: 50,
+                    child: CustomElevatedButton(
+                      func: () {},
+                      label: 'Login',
+                      color: primaryColor,
+                    ) //boton,
                     ),
-                    child: const Text(
-                      'Login',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-                    ),
-                  ),
-                ),
               ),
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
                 child: SizedBox(
                   width: 260.00,
-                  height: 45,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ButtonStyle(
-                      backgroundColor: const MaterialStatePropertyAll(
-                          Color.fromRGBO(51, 212, 157, 1)),
-                      shape: MaterialStatePropertyAll<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0),
-                        ),
-                      ),
-                    ),
-                    child: const Text(
-                      'Registrarse',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-                    ),
+                  height: 50,
+                  child: CustomElevatedButton(
+                    func: () {},
+                    label: 'Registrarte',
+                    color: green,
                   ),
                 ),
               ),

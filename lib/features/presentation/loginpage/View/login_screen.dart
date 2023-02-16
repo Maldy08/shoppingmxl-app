@@ -27,7 +27,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  width: 300,
+                  width: 350,
                   height: 300,
                   decoration: const BoxDecoration(
                       color: Colors.white,
@@ -47,6 +47,7 @@ class LoginScreen extends StatelessWidget {
                           fillColor: bgContainer,
                           labelText: 'Correo',
                           border: OutlineInputBorder(
+                            borderSide: BorderSide.none,
                             borderRadius: BorderRadius.all(
                               Radius.circular(25),
                             ),
@@ -68,6 +69,7 @@ class LoginScreen extends StatelessWidget {
                           fillColor: bgContainer,
                           labelText: 'Password',
                           border: OutlineInputBorder(
+                            borderSide: BorderSide.none,
                             borderRadius: BorderRadius.all(
                               Radius.circular(25),
                             ),

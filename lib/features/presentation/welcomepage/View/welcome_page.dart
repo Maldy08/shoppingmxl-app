@@ -62,7 +62,9 @@ class WelcomePage extends StatelessWidget {
                     width: 260.00,
                     height: 50,
                     child: CustomElevatedButton(
-                      func: () {},
+                      func: () {
+                        Navigator.pushNamed(context, '/login-page');
+                      },
                       label: 'Login',
                       color: primaryColor,
                     ) //boton,
@@ -74,7 +76,9 @@ class WelcomePage extends StatelessWidget {
                   width: 260.00,
                   height: 50,
                   child: CustomElevatedButton(
-                    func: () {},
+                    func: () {
+                      Navigator.pushNamed(context, '/register-page');
+                    },
                     label: 'Registrarte',
                     color: green,
                   ),

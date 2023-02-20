@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shoppingmxl/colors/colors.dart';
+import 'package:shoppingmxl/features/presentation/customWidgets/custom_appbar.dart';
 import 'package:shoppingmxl/features/presentation/customWidgets/custom_elevated_button.dart';
+import 'package:flutter_signin_button/flutter_signin_button.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -8,6 +10,9 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const CustomAppBar(
+        title: 'Sign in',
+      ),
       backgroundColor: bgContainer,
       body: SafeArea(
         child: SizedBox(
@@ -28,7 +33,7 @@ class LoginScreen extends StatelessWidget {
                 ),
                 Container(
                   width: 350,
-                  height: 300,
+                  height: 260,
                   decoration: const BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.all(Radius.circular(20))),
@@ -40,7 +45,7 @@ class LoginScreen extends StatelessWidget {
                         decoration: const InputDecoration(
                           isDense: true,
                           prefixIcon: Icon(
-                            Icons.account_circle_rounded,
+                            Icons.mail_outline,
                             color: primaryColor,
                           ),
                           filled: true,
@@ -62,7 +67,7 @@ class LoginScreen extends StatelessWidget {
                         decoration: const InputDecoration(
                           isDense: true,
                           prefixIcon: Icon(
-                            Icons.password_rounded,
+                            Icons.lock_outline,
                             color: primaryColor,
                           ),
                           filled: true,
@@ -80,9 +85,49 @@ class LoginScreen extends StatelessWidget {
                         height: 20,
                       ),
                       CustomElevatedButton(
-                          func: () {}, label: 'Iniciar sesion', color: green)
+                          func: () {},
+                          label: 'Iniciar sesión',
+                          color: primaryColor)
                     ],
                   )),
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(top: 20),
+                  child: Text(
+                    '-o inicia sesión-',
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.black45,
+                    ),
+                  ),
+                ),
+                Column(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(0.5),
+                      child: SignInButton(
+                        Buttons.Facebook,
+                        onPressed: () {},
+                        text: 'Iniciar con Facebook',
+                        elevation: 5,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(0.5),
+                      child: SignInButton(
+                        Buttons.Google,
+                        onPressed: () {},
+                        text: 'Iniciar con Google',
+                        elevation: 5,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                      ),
+                    )
+                  ],
                 )
               ],
             ),

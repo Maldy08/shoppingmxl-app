@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'features/presentation/registarpage/view/register_screen.dart';
 import 'features/presentation/welcomepage/view/welcome_page.dart';
 import 'features/presentation/loginpage/View/login_screen.dart';
 
@@ -14,7 +15,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const LoginScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const WelcomePage(),
+        '/login-page': (context) => const LoginScreen(),
+        '/register-page': (context) => const RegisterScreen(),
+      },
     );
   }
 }

@@ -30,11 +30,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+    
 
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
+  flutter_signin_button: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -62,6 +63,11 @@ flutter:
   assets:
     - assets/images/login-image.png
     - assets/images/flutter-logo.png
+    - assets/images/change-password.png
+    - assets/images/create-account-success.png
+    - assets/images/create-password.png
+    - assets/images/forgot-password.png
+    - assets/images/select-location.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

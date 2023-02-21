@@ -22,21 +22,29 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                const SizedBox(
+                  height: 10,
+                ),
                 Container(
-                  width: 250,
+                  width: 350,
                   height: 250,
-                  padding: const EdgeInsets.all(30),
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(30),
+                    ),
+                  ),
                   child: Image.asset(
                     'assets/images/login-image.png',
-                    fit: BoxFit.fitWidth,
                   ),
                 ),
+                const SizedBox(height: 10),
                 Container(
                   width: 350,
                   height: 260,
                   decoration: const BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                      borderRadius: BorderRadius.all(Radius.circular(30))),
                   padding: const EdgeInsets.all(30),
                   child: Form(
                       child: ListView(

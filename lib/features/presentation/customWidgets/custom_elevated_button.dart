@@ -17,6 +17,7 @@ class CustomElevatedButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: func,
       style: ButtonStyle(
+        elevation: const MaterialStatePropertyAll(0),
         backgroundColor: MaterialStatePropertyAll(
           color,
         ),

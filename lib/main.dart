@@ -3,7 +3,7 @@ import 'features/presentation/registarpage/view/register_screen.dart';
 import 'features/presentation/welcomepage/view/welcome_page.dart';
 import 'features/presentation/loginpage/View/login_screen.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'MyShop',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorSchemeSeed: Colors.blue,
+      
       ),
       initialRoute: '/',
       routes: {
